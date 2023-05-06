@@ -4,6 +4,8 @@ Terminal:
 
 sudo gedit /home/$USER/.bashrc
 
+sudo gedit /home/ubun/.bashrc
+
 Add at the end of the file
 
 export CUDA_HOME=/usr/local/cuda
