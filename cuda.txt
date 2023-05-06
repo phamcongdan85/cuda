@@ -1,0 +1,19 @@
+
+
+Terminal:
+
+sudo gedit /home/$USER/.bashrc
+
+Add at the end of the file
+
+export CUDA_HOME=/usr/local/cuda
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64
+export PATH=$PATH:$CUDA_HOME/bin
+
+Then terminal:
+
+source .bashrc
+
+Now run
+
+nvcc --version
