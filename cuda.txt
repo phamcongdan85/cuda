@@ -17,3 +17,9 @@ source .bashrc
 Now run
 
 nvcc --version
+
+
+Go bo driver nvidia:
+
+$ sudo apt autoremove
+$ sudo apt autoclean
