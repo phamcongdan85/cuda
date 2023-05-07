@@ -25,3 +25,23 @@ Go bo driver nvidia:
 
 $ sudo apt autoremove
 $ sudo apt autoclean
+
+
+# cai cunn ubuntu20.04
+Dung lenh sudp apt install nvidia-cuda-toolkit se tu dong tai va cai cuda 10.1
+sau do tao ve cudnn7.5.0.tar.gz roi giai nen va copy nhu duoi day vao thu muc tuong ung cua cuda lib
+
+1.3. Installing on Linux
+The following steps describe how to build a cuDNN dependent program. Choose the installation method that meets your environment needs. For example, the tar file installation applies to all Linux platforms. The Debian package installation applies to Debian 11, Ubuntu 18.04, Ubuntu 20.04, and 22.04. The RPM package installation applies to RHEL7, RHEL8, and RHEL9.
+In the following sections:
+your CUDA directory path is referred to as /usr/local/cuda/
+your cuDNN download path is referred to as <cudnnpath>
+1.3.1. Tar File Installation
+Before issuing the following commands, you must replace X.Y and v8.x.x.x with your specific CUDA and cuDNN versions and package date.
+Navigate to your <cudnnpath> directory containing the cuDNN tar file.
+Unzip the cuDNN package.
+$ tar -xvf cudnn-linux-x86_64-8.x.x.x_cudaX.Y-archive.tar.xz
+Copy the following files into the CUDA toolkit directory.
+$ sudo cp cudnn-*-archive/include/cudnn*.h /usr/local/cuda/include 
+$ sudo cp -P cudnn-*-archive/lib/libcudnn* /usr/local/cuda/lib64 
+$ sudo chmod a+r /usr/local/cuda/include/cudnn*.h /usr/local/cuda/lib64/libcudnn*
